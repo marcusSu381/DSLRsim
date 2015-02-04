@@ -3,7 +3,7 @@
     <div class="textsection">
       <div class="w-container textcontainer"><img class="logo" src="images/icon.svg" width="150" alt="54caf7e3c7b1fb7312fd5193_icon.svg">
         <h1 class="home-title">DSLRsim</h1>
-        <p class="home-text">CamLab helps you quickly explore the shutter speed, aperture, IOS on a DSLR and see the result in the meantime.</p><a class="try-ti" href="#">Try it</a>
+        <p class="home-text">CamLab helps you quickly explore the aperture, shutter speed, ISO on a DSLR and see the result in the meantime.</p><a class="try-ti" href="#">Try it</a>
       </div>
     </div>
     <div class="w-nav nav-bar" data-collapse="none" data-animation="default" data-duration="400" data-contain="1">
@@ -16,7 +16,7 @@
   <div class="simulator-section">
     <div class="w-container simulator-container">
       <div class="section-inside">
-        <div class="simulator-title">Change the shutter speed (SS) aperture ios to see result</div>
+        <div class="simulator-title">Change the aperture, shutter speed and ISO to see result</div>
           <li ng-repeat="items in settings | filter:search:strict |limitTo:1">
       <img class="image"ng-src="images/sim/{{items.filename}}.jpg" alt="Photo of {{items.filename}}">
       <p>{{items.aperture}}</p>
