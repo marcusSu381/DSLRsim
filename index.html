@@ -1,62 +1,83 @@
-<!DOCTYPE html>
-<!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Thu Jan 29 2015 06:39:03 GMT+0000 (UTC) -->
-<html data-wf-site="54c9bcbad23112847b346c62" data-wf-page="54c9bcbad23112847b346c63">
-<head>
-  <meta charset="utf-8">
-  <title>camlab</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="Webflow">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+   
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+ 
+    <!-- endbuild -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/webflow.css">
-  <link rel="stylesheet" type="text/css" href="css/camlab.css">
+  <link rel="stylesheet" type="text/css" href="css/dslrsim.webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/rangeslider.css">
+ 
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script>
     WebFont.load({
       google: {
-        families: ["Great Vibes:400","Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic"]
+        families: ["Bitter:400,700,400italic","Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","Open Sans Condensed:300,300italic,700:greek,latin","Raleway:100,200,300,regular"]
       }
     });
   </script>
   <script type="text/javascript" src="js/modernizr.js"></script>
-  <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico">
-  <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
-</head>
-<body>
-  <div class="jumbotron">
-    <div class="navbar">
-      <div class="w-row navbar">
-        <div class="w-col w-col-4 w-col-tiny-4 navbutton"><a class="about" href="#">About</a>
-        </div>
-        <div class="w-col w-col-4 w-col-tiny-4 navbutton"></div>
-        <div class="w-col w-col-4 w-col-tiny-4 navbutton"></div>
-      </div>
-    </div>
-    <div class="textcontainer"><img class="icon" src="images/camera.svg" width="50" height="50" alt="54c9c7023163c87c2a023f42_camera.svg">
-    </div>
-    <div class="w-container">
-      <h1>CamLab</h1>
-    </div>
-    <div class="w-container">
-      <p>CamLab helps you quickly explore the shutter speed, aperture, ios on a DSLR and see the result in the meantime.</p>
-    </div>
-    <div><a class="button" href="#">Try it</a>
-    </div>
-  </div>
-  <div class="imagesection">
-    <div class="w-container imagecontainer"><img src="images/aperture-vs-exposure-3.jpg" alt="54c9cdd5d23112847b346d5a_aperture-vs-exposure-3.jpg">
-      <div class="w-row buttons">
-        <div class="w-col w-col-4 w-col-tiny-4"><img class="controlericon" src="images/stopwatch.svg" width="30" height="30" alt="54c9d34e6a06de7d2a053d06_stopwatch.svg"><a class="controler" href="#">Shutter speed</a>
-        </div>
-        <div class="w-col w-col-4 w-col-tiny-4"><img class="controlericon" src="images/picassa.svg" width="256" height="30" alt="54c9d43d6a06de7d2a053d1a_picassa.svg"><a class="controler" href="#">Aperture</a>
-        </div>
-        <div class="w-col w-col-4 w-col-tiny-4"><img class="controlericon" src="images/stopwatch.svg" width="150" height="30" alt="54c9d4fa11623c837b0e77be_stopwatch.svg"><a class="controler" href="#">ISO</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/webflow.js"></script>
-  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  <link rel="shortcut icon" type="image/x-icon" href="images/webicon16x16.png">
+  <link rel="apple-touch-icon" href="images/webicon-256.png">
+
+
+  </head>
+  <body ng-app="iat381Lab2App">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+      <div class="container" ng-view=""></div>
+
+    
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/webflow.js"></script>
+
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- <script src="bower_components/jquery/dist/jquery.js"></script> -->
+    <script src="bower_components/angular/angular.js"></script>
+   <!-- <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script> -->
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/demo.js"></script>
+        <script src="scripts/controllers/home.js"></script>
+        
+        
+    
+
+        <!-- endbuild -->
 </body>
 </html>
