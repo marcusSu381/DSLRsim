@@ -1,0 +1,79 @@
+
+<div class="jumbotron">
+    <div class="textsection">
+      <div class="w-container textcontainer"><img class="logo" src="images/icon.svg" width="150" alt="54caf7e3c7b1fb7312fd5193_icon.svg">
+        <h1 class="home-title">DSLRsim</h1>
+        <p class="home-text">CamLab helps you quickly explore the shutter speed, aperture, IOS on a DSLR and see the result in the meantime.</p><a class="try-ti" href="/#simulator-section">Try it</a>
+      </div>
+    </div>
+    <div class="w-nav nav-bar" data-collapse="none" data-animation="default" data-duration="400" data-contain="1">
+      <div class="w-container menu-container">
+        <nav class="w-nav-menu w-clearfix nav-menu" role="navigation"><a class="w-nav-link nav-link" href="#/settings">Settings</a><a class="w-nav-link nav-link" href="#/ency">Ency</a><a class="w-nav-link nav-link" href="#/home">Home</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="simulator-section" id="simulator-section">
+    <div class="w-container simulator-container">
+      <div class="section-inside">
+        <div class="simulator-title">Change the aperture, shutter speed and ISO to see result</div>
+        <div ng-switch="isLoading">
+
+    <!-- BEGIN: Loading View. -->
+    <p ng-switch-when="true">
+
+      Your images are being loaded... {{ percentLoaded }}%
+
+    </p>
+    <!-- END: Loading View. -->
+
+    <!-- BEGIN: Results View. -->
+    <div 
+    ng-switch-when="false" 
+    ng-switch="isSuccessful">
+
+    <p ng-switch-when="true">
+      <div  class="imagecontainer" ng-repeat="src in imageLocations | filter:search1:strict| filter:search2:strict| filter:search3:strict | limitTo:1">
+      <img id="image" ng-src="{{src.filename}}" alt="{{src.filename}}" class="image"/>
+      <p id="settings">{{src.aperture}}  |  {{src.ss}}  |  {{src.iso}}</p>
+      </div>
+    </p>
+
+    <p ng-switch-when="false">
+
+      <strong>Oops</strong>: One of your images failed to load :(
+
+    </p>
+
+  </div>
+  <!-- END: Results View. -->
+
+</div>
+        <div class="slider-div">
+          <input ng-model="search1.slider1" type="range" min="1" max="5" step="1" value="1">
+        </div>
+        <div class="slider-div mid">
+          <input ng-model="search2.slider2" type="range" min="1" max="5" step="1" value="1">
+        </div>
+        <div class="slider-div">
+          <input ng-model="search3.slider3" type="range" min="1" max="5" step="1" value="1">
+        </div>
+        <div class="more-about">You can save this setting, or for more about DSLR mechanism please access to the encyclopaedia page.
+        </div>
+        <a class="try-ti seeency save" href="">Save</a><br><a class="try-ti seeency" href="#/ency">See Ency</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="w-container footer-container">
+      <div class="footer-text">© 2015 Made by Marcus &amp; Joey</div>
+    </div>
+  </div>
+    
+    <script type="text/javascript" src="js/rangeslider.js"></script>
+    
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/save.js"></script>
+    <script>
+    
+    </script>
